@@ -1,10 +1,14 @@
 import './App.css'
+import BarraDePesquisa from './componentes/barraDePesquisa'
 import Sidebar from './componentes/sideBar'
 
 function App() {
 
   return (
-    <Sidebar/>
+    <div>
+      <Sidebar/>
+      <BarraDePesquisa />
+    </div>
   )
 }
 
