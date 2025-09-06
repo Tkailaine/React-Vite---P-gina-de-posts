@@ -2,9 +2,9 @@ import './styles.css'
 
 export default function BarraDePesquisa(){
 
-    function InputPesquisa(placeholder, classe){
+    function InputPesquisa({placeholder, classe}){
         return(
-            <input type="seach" placeholder={placeholder} className={classe} />
+            <input type="search" placeholder={placeholder} className={classe} />
         )
     }
     return(
