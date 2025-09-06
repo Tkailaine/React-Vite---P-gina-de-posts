@@ -19,7 +19,7 @@ export default function Sidebar(){
         
         function Botao({children}){
             return(
-                <button>{children}</button>
+                <button className='botao__sidebar-publicar'>{children}</button>
             )
         }
 
@@ -28,7 +28,7 @@ export default function Sidebar(){
         <img src={Logo} alt="Logo do CodeConnect" />
 
         <ul className='lista-sidebar'>
-            <li><Botao />Publicar</li>
+            <li ><Botao >Publicar</Botao></li>
            <LinkSideBar icone={Feed}>Feed</LinkSideBar>
            
             <LinkSideBar icone={Perfil}>Perfil</LinkSideBar>
