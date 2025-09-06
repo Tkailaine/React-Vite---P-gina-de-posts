@@ -4,9 +4,10 @@ import './styles.css'
 export default function BarraDePesquisa(){
 
     function InputPesquisa({placeholder, classe}){
-        const [termoPesquisa, setPesquisa] = useState('')
+        const [termoPesquisa, setTermoPesquisa] = useState('')
+        console.log(termoPesquisa)
         return(
-            <input type="search" placeholder={placeholder} className={classe} value={termoPesquisa} setValor={setPesquisa} />
+            <input type="search" placeholder={placeholder} className={classe} value={termoPesquisa} onChange={(evento) => setTermoPesquisa(evento.target.value)} />
         )
     }
     return(
