@@ -22,3 +22,7 @@ body{
   background-color: var(--grafite);
   font-family: var(--fonte);
 }
+
+a{
+  text-decoration: none;
+}

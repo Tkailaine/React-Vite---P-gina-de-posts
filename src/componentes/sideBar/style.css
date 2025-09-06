@@ -4,3 +4,27 @@ aside {
     width: 177px;
     border-radius: 8px;
 }
+
+.lista-sidebar a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cinza-medio);
+    
+}
+
+.lista-sidebar img{
+    width: 32px;
+}
+
+.lista-sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
