@@ -28,6 +28,7 @@ export default function Sidebar(){
         <img src={Logo} alt="Logo do CodeConnect" />
 
         <ul className='lista-sidebar'>
+            <li><Botao />Publicar</li>
            <LinkSideBar icone={Feed}>Feed</LinkSideBar>
            
             <LinkSideBar icone={Perfil}>Perfil</LinkSideBar>
