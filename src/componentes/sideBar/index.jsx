@@ -3,6 +3,7 @@ import Feed from './assets/feed.svg'
 import Info from './assets/info.svg'
 import Perfil from './assets/perfil.svg'
 import Logout from './assets/logout.svg'
+import './style.css'
 
 export default function Sidebar(){
 
@@ -14,7 +15,7 @@ export default function Sidebar(){
             </li>
                 )
             }
-            
+
         
         function Botao({children}){
             return(
