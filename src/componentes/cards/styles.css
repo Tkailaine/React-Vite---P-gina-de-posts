@@ -5,6 +5,8 @@
     border-radius: 8px;
     width: 50%;
     display: grid;
+    margin-top: 3em;
+    
 }
 
 .card__imagem {
@@ -29,6 +31,7 @@
 .card__conteudo {
     padding: 16px;
     height: 100%;
+   
 }
 
 .card__link {
@@ -50,12 +53,14 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 23px;
+    
 }
 
 .conteudo__rodape {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  
 
 }
 
@@ -64,11 +69,10 @@
     gap: 16px;
     list-style: none;
     align-items: baseline;
+
 }
 
-.conteudo__rodape div {
-    flex-grow: 0;
-}
+
 
 .conteudo__rodape ul li {
     display: flex;
@@ -76,12 +80,21 @@
     align-items: center;
     gap: 4px;
     font-size: 15px;
+    margin-left: 8px;
+    
 }
 
-.rodape__usuario {
+.btn-interacao{
+    background-color: transparent;
+    border: none;
+}
+
+.usuario_icone_nome {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-right: 8px;
+    
 }
 
 .rodape__usuario img {
@@ -90,3 +103,4 @@
     border-radius: 100%;
     object-fit: cover;
 }
+

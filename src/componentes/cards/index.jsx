@@ -20,7 +20,7 @@ function ResumoCard({ children }) {
 function BotaoInteracaoCard({ nomeIcone, onClick, children }) {
   return (
     <li>
-      <button onClick={onClick}>
+      <button className='btn-interacao' onClick={onClick}>
         <img src={`/assets/${nomeIcone}.svg`} alt={`icone ${nomeIcone}`} />
       </button>
       {children}
@@ -30,7 +30,7 @@ function BotaoInteracaoCard({ nomeIcone, onClick, children }) {
 
 function AutorUsuario({ nomeImagem, children }) {
   return (
-    <div>
+    <div className='usuario_icone_nome'>
       <img src={`/assets/${nomeImagem}.svg`} alt="imagem do usuário" />
       {children}
     </div>
@@ -50,17 +50,21 @@ export default function Cards() {
         </div>
       </div>
 
-      <div className="conteudo_rodape">
-        <ul>
-          <BotaoInteracaoCard nomeIcone="code" onClick={() => setContCode(contCode + 1)}>
-            <p>{contCode}</p>
-          </BotaoInteracaoCard>
-        </ul>
+      <div className="conteudo__rodape">
+        <div>
+            <ul>
+              <BotaoInteracaoCard nomeIcone="code" onClick={() => setContCode(contCode + 1)}>
+                <p>{contCode}</p>
+              </BotaoInteracaoCard>
+            </ul>
+        </div> 
+        
+            <div className="rodape__usuario">
+        <AutorUsuario nomeImagem="icone">@user</AutorUsuario>
+        </div>
       </div>
 
-      <div className="rodape__usuario">
-        <AutorUsuario nomeImagem="icone">@user</AutorUsuario>
-      </div>
+     
     </article>
   );
 }
