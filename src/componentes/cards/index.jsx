@@ -1,15 +1,22 @@
-import Capa from './assets/capa.png'
+
 import Code from './assets/code.svg'
 import Chat from './assetes/chat.svg'
 import Share from './assets/share.svg'
 import Icone from './assets/user.svg'
 
 export default function Cards(){
+
+    function CapaCard({nomeImagem}){
+        return(
+              <div className="card__imagem">
+                <img src={`.assets/${nomeImagem}.jpeg`} alt="imagem do post" />
+            </div>
+        )
+    }
+
     return (
         <article className="card"> 
-            <div className="card__imagem">
-                <img src={Capa} alt="imagem do post" />
-            </div>
+          <CapaCard nomeImagem="capa" />
             <div className='card__conteudo'>
                 <div className='conteudo__texto'>
                     <h3>Título do post</h3>
