@@ -47,17 +47,13 @@ src/
 ## 💻 Instalação
 
 1. Clone o repositório:
-
-```bash
 git clone https://github.com/Tkailaine/React-Vite---Pagina-de-posts.git
 
 2. Instale as dependências:
-
 npm install
 
 
 3. Execute o projeto:
-
 npm run dev
 
 ---
