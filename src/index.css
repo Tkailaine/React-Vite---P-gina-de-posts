@@ -27,3 +27,14 @@ a{
   text-decoration: none;
 }
 
+h3, p{
+  color: var(--cinza-claro);
+}
+
+ul{
+  list-style-type: none;
+}
+
+button{
+  cursor: pointer;
+}
