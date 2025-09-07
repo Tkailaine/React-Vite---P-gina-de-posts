@@ -21,7 +21,7 @@ function BotaoInteracaoCard({ nomeIcone, onClick, children }) {
   return (
     <li>
       <button className='btn-interacao' onClick={onClick}>
-        <img src={`../../../public/assets/${nomeIcone}.svg`} alt={`icone ${nomeIcone}`} />
+       <img src={`${import.meta.env.BASE_URL}assets/${nomeIcone}.svg`} />
       </button>
       {children}
     </li>
