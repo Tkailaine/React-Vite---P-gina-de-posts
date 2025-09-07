@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import './App.css'
 import BarraDePesquisa from './componentes/barraDePesquisa'
 import Cards from './componentes/cards'
@@ -6,6 +7,14 @@ import Ordenacao from './componentes/ordenacao'
 import Sidebar from './componentes/sideBar'
 
 function App() {
+  const [dados, setDados] = useState([])
+ useEffect(() => {
+  fetch('https://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes')
+  .then(resposta => resposta.json())
+  .then(dados => setDados(dados))
+ }, [])
+
+ console.log(dados)
 
   return (
     <div className='container'>
