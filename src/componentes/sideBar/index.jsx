@@ -7,11 +7,11 @@ import './style.css'
 
 export default function Sidebar(){
 
-        function LinkSideBar({icone, children}){
+        function LinkSideBar({icone, children, classe}){
 
             return(   
             <li>
-                <a href="#"><img src={icone} alt="Ícone de Feed" /><span>{children}</span></a>
+                <a href="#" ><img src={icone} alt="Ícone de Feed" /><span className={classe}>{children}</span></a>
             </li>
                 )
             }
@@ -29,13 +29,13 @@ export default function Sidebar(){
 
         <ul className='lista-sidebar'>
             <li ><Botao >Publicar</Botao></li>
-           <LinkSideBar icone={Feed}>Feed</LinkSideBar>
+           <LinkSideBar classe='link-sidebar-ativo' icone={Feed}>Feed</LinkSideBar>
            
-            <LinkSideBar icone={Perfil}>Perfil</LinkSideBar>
+            <LinkSideBar classe='link-sidebar' icone={Perfil}>Perfil</LinkSideBar>
 
-            <LinkSideBar icone={Info}>Sobre nós</LinkSideBar>
+            <LinkSideBar classe='link-sidebar' icone={Info}>Sobre nós</LinkSideBar>
 
-            <LinkSideBar icone={Logout}>Logout</LinkSideBar>
+            <LinkSideBar classe='link-sidebar' icone={Logout}>Logout</LinkSideBar>
         </ul>
     </aside>
 

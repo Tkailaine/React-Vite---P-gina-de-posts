@@ -10,12 +10,16 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--cinza-medio);
-    font-size: 18px;
-    gap: 10px;    
+    
 }
 
-.lista-sidebar .link-ativo{
+.link-sidebar{
+    color: var(--cinza-medio);
+    font-size: 18px;
+    gap: 10px;   
+}
+
+.link-sidebar-ativo{
     color: white;
 }
 
