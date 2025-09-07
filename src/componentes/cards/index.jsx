@@ -39,10 +39,14 @@ function AutorUsuario({ nomeImagem, children }) {
 
 export default function Cards() {
   const [contCode, setContCode] = useState(0);
+  const [contChat, setContChat] = useState(0);
+  const [contShare, setContShare] = useState(0);
 
   return (
     <article className="card">
+
       <CapaCard nomeImagem="capa" />
+
       <div className="card__conteudo">
         <div className="conteudo__texto">
           <TituloCard>Título do post</TituloCard>
@@ -56,11 +60,19 @@ export default function Cards() {
               <BotaoInteracaoCard nomeIcone="code" onClick={() => setContCode(contCode + 1)}>
                 <p>{contCode}</p>
               </BotaoInteracaoCard>
+
+              <BotaoInteracaoCard nomeIcone="chat" onClick={() => setContChat(contChat + 1)}>
+                <p>{contChat}</p>
+              </BotaoInteracaoCard>
+
+              <BotaoInteracaoCard nomeIcone='share' onClick={() => setContShare(contShare + 1)}>
+                <p>{contShare}</p>
+              </BotaoInteracaoCard>
             </ul>
         </div> 
         
-            <div className="rodape__usuario">
-        <AutorUsuario nomeImagem="icone">@user</AutorUsuario>
+        <div className="rodape__usuario">
+            <AutorUsuario nomeImagem="icone">@user</AutorUsuario>
         </div>
       </div>
 
