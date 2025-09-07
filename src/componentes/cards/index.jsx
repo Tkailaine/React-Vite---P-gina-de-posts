@@ -28,6 +28,24 @@ function BotaoInteracaoCard({ nomeIcone, onClick, children }) {
   );
 }
 
+function HandleComentario(){
+    return(
+        alert("Adicionando comentário...")
+    )
+}
+
+function HandleCompartilhar(){
+    return(
+        alert("Compartilhando...")
+    )
+}
+
+function HandleCode(){
+    return(
+        alert("Copiando código...")
+    )
+}
+
 function AutorUsuario({ nomeImagem, children }) {
   return (
     <div className='usuario_icone_nome'>
@@ -57,15 +75,17 @@ export default function Cards() {
       <div className="conteudo__rodape">
         <div>
             <ul>
-              <BotaoInteracaoCard nomeIcone="code" onClick={() => setContCode(contCode + 1)}>
+              <BotaoInteracaoCard nomeIcone="code" onClick={() => {setContCode(contCode + 1);
+                HandleCode()}
+              }>
                 <p>{contCode}</p>
               </BotaoInteracaoCard>
 
-              <BotaoInteracaoCard nomeIcone="chat" onClick={() => setContChat(contChat + 1)}>
+              <BotaoInteracaoCard nomeIcone="chat" onClick={() => {setContChat(contChat + 1); HandleComentario()}}>
                 <p>{contChat}</p>
               </BotaoInteracaoCard>
 
-              <BotaoInteracaoCard nomeIcone='share' onClick={() => setContShare(contShare + 1)}>
+              <BotaoInteracaoCard nomeIcone='share' onClick={() => {setContShare(contShare + 1); HandleCompartilhar()}}>
                 <p>{contShare}</p>
               </BotaoInteracaoCard>
             </ul>
