@@ -12,6 +12,18 @@ export default function Cards(){
                 <img src={`.assets/${nomeImagem}.jpeg`} alt="imagem do post" />
             </div>
         )
+    function TituloCard({children}){
+        return(
+            <h3>{children}</h3>
+        )
+    }
+
+     function ResumoCard({children}){
+        return(
+            <p>{children}</p>
+        )
+    }
+
     }
 
     return (
@@ -19,8 +31,8 @@ export default function Cards(){
           <CapaCard nomeImagem="capa" />
             <div className='card__conteudo'>
                 <div className='conteudo__texto'>
-                    <h3>Título do post</h3>
-                    <p>Resumo do post</p>
+                   <TituloCard>Título do post</TituloCard>
+                    <ResumoCard>Resumo do post</ResumoCard>
                 </div>
             </div>
         
