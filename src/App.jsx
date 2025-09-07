@@ -27,7 +27,19 @@ function App() {
           <Ordenacao classe='btn-ordenacao'>Recentes</Ordenacao>
          
         </div> 
-        <Cards />
+       <ul className='lista-cards'>
+          {dados ? dados.map((item, index)=> (
+            <li key={index}>
+              <Cards id={item.id} 
+              imagemUrl={item.imagem_capa}
+              titulo={item.titulo} 
+              resumo={item.resumo}
+              usuario={item.usuario}
+              />
+            </li>
+          )) : null}  
+       </ul>
+
       </div>
     </div>
   )

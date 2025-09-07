@@ -4,7 +4,7 @@ import './styles.css';
 function CapaCard({ nomeImagem }) {
   return (
     <div className="card__imagem">
-      <img src={`/assets/${nomeImagem}.jpg`} alt={`imagem do post: ${nomeImagem}`} />
+      <img src={`${nomeImagem}`} alt={`imagem do post: ${nomeImagem}`} />
     </div>
   );
 }
@@ -49,13 +49,13 @@ function HandleCode(){
 function AutorUsuario({ nomeImagem, children }) {
   return (
     <div className='usuario_icone_nome'>
-      <img src={`/assets/${nomeImagem}.svg`} alt="imagem do usuário" />
+      <img src={`${nomeImagem}`} alt="imagem do usuário" />
       {children}
     </div>
   );
 }
 
-export default function Cards() {
+export default function Cards({imagemUrl,titulo,resumo, usuario}) {
   const [contCode, setContCode] = useState(0);
   const [contChat, setContChat] = useState(0);
   const [contShare, setContShare] = useState(0);
@@ -63,12 +63,12 @@ export default function Cards() {
   return (
     <article className="card">
 
-      <CapaCard nomeImagem="capa" />
+      <CapaCard nomeImagem={imagemUrl} />
 
       <div className="card__conteudo">
         <div className="conteudo__texto">
-          <TituloCard>Título do post</TituloCard>
-          <ResumoCard>Resumo do post</ResumoCard>
+          <TituloCard>{titulo}</TituloCard>
+          <ResumoCard>{resumo}</ResumoCard>
         </div>
       </div>
 
@@ -92,7 +92,7 @@ export default function Cards() {
         </div> 
         
         <div className="rodape__usuario">
-            <AutorUsuario nomeImagem="icone">@user</AutorUsuario>
+            <AutorUsuario nomeImagem={usuario.imagem}>{usuario.nome}</AutorUsuario>
         </div>
       </div>
 
