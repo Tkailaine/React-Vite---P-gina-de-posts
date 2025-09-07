@@ -1,63 +1,53 @@
+import { useState } from 'react';
 
-import Code from './assets/code.svg'
-import Chat from './assetes/chat.svg'
-import Share from './assets/share.svg'
-import Icone from './assets/user.svg'
+function CapaCard({ nomeImagem }) {
+  return (
+    <div className="card__imagem">
+      <img src={`.assets/${nomeImagem}.jpeg`} alt="imagem do post" />
+    </div>
+  );
+}
 
-export default function Cards(){
+function TituloCard({ children }) {
+  return <h3>{children}</h3>;
+}
 
-    function CapaCard({nomeImagem}){
-        return(
-              <div className="card__imagem">
-                <img src={`.assets/${nomeImagem}.jpeg`} alt="imagem do post" />
-            </div>
-        )
-    function TituloCard({children}){
-        return(
-            <h3>{children}</h3>
-        )
-    }
+function ResumoCard({ children }) {
+  return <p>{children}</p>;
+}
 
-     function ResumoCard({children}){
-        return(
-            <p>{children}</p>
-        )
-    }
+function BotaoInteracaoCard({ nomeIcone, onClick, children }) {
+  return (
+    <li>
+      <button onClick={onClick}>
+        <img src={`.assets/${nomeIcone}.svg`} alt={`icone ${nomeIcone}`} />
+      </button>
+      {children}
+    </li>
+  );
+}
 
-    }
 
-    return (
-        <article className="card"> 
-          <CapaCard nomeImagem="capa" />
-            <div className='card__conteudo'>
-                <div className='conteudo__texto'>
-                   <TituloCard>Título do post</TituloCard>
-                    <ResumoCard>Resumo do post</ResumoCard>
-                </div>
-            </div>
-        
-        <div className='conteudo_rodape'>
-            <ul>
-                <li>
-                    <img src={Code} alt="códigos" />
-                    100
-                </li>
-                <li>
-                    <img src={Share} alt="Compartilhar" />
-                    12
-                </li>
+export default function Cards() {
+  const [contCode, setContCode] = useState(0);
 
-                <li>
-                    <img src={Chat} alt="Comentários" />
-                    10
-                </li>
-            </ul>
-
-            <div className='rodape__usuario'>
-                <img src={Icone} alt="imagem do usuário" />
-                @user
-            </div>
+  return (
+    <article className="card">
+      <CapaCard nomeImagem="capa" />
+      <div className="card__conteudo">
+        <div className="conteudo__texto">
+          <TituloCard>Título do post</TituloCard>
+          <ResumoCard>Resumo do post</ResumoCard>
         </div>
-        </article>
-    )
+      </div>
+
+      <div className="conteudo_rodape">
+        <ul>
+          <BotaoInteracaoCard nomeIcone="code" onClick={() => setContCode(contCode + 1)}>
+            <p>{contCode}</p>
+          </BotaoInteracaoCard>
+        </ul>
+      </div>
+    </article>
+  );
 }
