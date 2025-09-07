@@ -7,9 +7,9 @@ export default function Filtros(){
         )
     }
     
-    function BotaoLimparPesquisa(){
+    function BotaoLimparTudo(){
         return(
-            <button className='btn-limpar-pesquisa'>Limpar Pesquisa</button>
+            <button className='btn-limpar-pesquisa'>Limpar tudo</button>
         )
     }
     return(
@@ -19,7 +19,7 @@ export default function Filtros(){
                 <BotaoFiltro>React</BotaoFiltro>
                 <BotaoFiltro>Acessibilidade</BotaoFiltro>
             </div>
-            <BotaoLimparPesquisa/>
+            <BotaoLimparTudo/>
         </div>
     )
 }
