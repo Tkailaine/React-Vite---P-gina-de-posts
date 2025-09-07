@@ -45,4 +45,29 @@ aside {
     width: 130px;
 }
 
+.btn-ordenacao, .btn-ordenacao-ativa{
+    background-color: transparent;
+    border: none;  
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.container-ordenacao{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 3em;
+  
+}
+
+.btn-ordenacao{
+    color: var(--cinza-medio);
+}
+
+.btn-ordenacao-ativa{
+    color: var(--verde-destaque);
+    text-decoration: underline;
+}
+
 
