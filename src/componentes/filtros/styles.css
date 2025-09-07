@@ -16,5 +16,18 @@
     display: flex;
     gap: 10px;
     margin-left: 1em;
+
+}
+
+.btn-limpar-pesquisa, .btn-filtro{
     margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.btn-limpar-pesquisa{
+    background-color: transparent;
+    border: none;
+    color: var(--cinza-claro);
+    font-size: 15px;
+    
 }
