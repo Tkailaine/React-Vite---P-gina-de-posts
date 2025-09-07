@@ -16,8 +16,9 @@ function App() {
         <div className='container-ordenacao'>
           <Ordenacao classe='btn-ordenacao-ativa'>Recentes</Ordenacao>
           <Ordenacao classe='btn-ordenacao'>Recentes</Ordenacao>
-          <Cards />
-        </div>
+         
+        </div> 
+        <Cards />
       </div>
     </div>
   )

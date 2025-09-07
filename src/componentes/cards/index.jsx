@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './styles.css'
 
 function CapaCard({ nomeImagem }) {
   return (
@@ -48,6 +49,9 @@ export default function Cards() {
           </BotaoInteracaoCard>
         </ul>
       </div>
+
+     
+
     </article>
   );
 }
