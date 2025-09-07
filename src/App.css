@@ -1,0 +1,6 @@
+.container-navegacao{
+  width: 64vw;
+  margin: 3.5em auto;
+  display: flex;
+  gap: 20px;
+}
