@@ -4,3 +4,7 @@
   display: flex;
   gap: 20px;
 }
+
+.container-pesquisa{
+  width: 100%;
+}

@@ -13,7 +13,7 @@ export default function Filtros(){
         )
     }
     return(
-        <div className='containe-filtro'>
+        <div className='container-filtro'>
             <div>
                 <BotaoFiltro>Front-end</BotaoFiltro>
                 <BotaoFiltro>React</BotaoFiltro>
